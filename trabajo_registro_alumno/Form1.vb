@@ -46,11 +46,16 @@ Public Class Form1
     End Sub
 
     Private Sub btnactualizar_Click(sender As Object, e As EventArgs) Handles btnactualizar.Click
-        Dim mostrar As New SqlDataAdapter("select * from registro", conexion)
-        Dim almacena As New DataSet
+        Try
+            Dim mostrar As New SqlDataAdapter("select * from registro", conexion)
+            Dim almacena As New DataSet
 
-        mostrar.Fill(almacena)
-        DataGridView1.DataSource = almacena.Tables(0)
+            mostrar.Fill(almacena)
+            DataGridView1.DataSource = almacena.Tables(0)
+
+        Catch ex As Exception
+            MsgBox("Ha ocurrido en error")
+        End Try
         conexion.Close()
     End Sub
 
@@ -78,20 +83,37 @@ Public Class Form1
     End Sub
 
     Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
-        conexion.Open()
-        Dim consulta As String = "delete from registro where Apellido='" + textbuscar.Text + "'"
-        comando = New SqlCommand(consulta, conexion)
-        comando.ExecuteNonQuery()
-        MsgBox("Los datos se han eliminado correctamente")
+        Try
+            conexion.Open()
+            Dim consulta As String = "delete from registro where ID='" + textid.Text + "'"
+            comando = New SqlCommand(consulta, conexion)
+            comando.ExecuteNonQuery()
+            MsgBox("Los datos se han eliminado correctamente")
+        Catch ex As Exception
+            MsgBox("Los datos no se han eliminado correctamente")
+        End Try
+        textid.Clear()
+        textnombre.Clear()
+        textapellido.Clear()
+        textfecha.Clear()
+        textcelu.Clear()
+        textdirec.Clear()
+        texttele.Clear()
+        textemail.Clear()
+
         conexion.Close()
     End Sub
 
     Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
-        Dim mostrar As New SqlDataAdapter("select * from registro where Apellido='" & textbuscar.Text & "'", conexion)
-        Dim almacena As New DataSet
+        Try
+            Dim mostrar As New SqlDataAdapter("select * from registro where Apellido='" & textbuscar.Text & "'", conexion)
+            Dim almacena As New DataSet
 
-        mostrar.Fill(almacena)
-        DataGridView1.DataSource = almacena.Tables(0)
+            mostrar.Fill(almacena)
+            DataGridView1.DataSource = almacena.Tables(0)
+        Catch ex As Exception
+            MsgBox("No se ha encontrado al alumno")
+        End Try
 
         conexion.Close()
     End Sub
@@ -129,7 +151,7 @@ Public Class Form1
     End Sub
 
     Private Sub textfecha_MouseHover(sender As Object, e As EventArgs) Handles textfecha.MouseHover
-        ToolTip2.SetToolTip(textfecha, "Ingrese aqui su fecha de nacimiento")
+        ToolTip2.SetToolTip(textfecha, "Ingrese aqui dia/mes/año")
         ToolTip2.ToolTipTitle = "Fecha de nacimiento"
         ToolTip2.ToolTipIcon = ToolTipIcon.Info
     End Sub

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TRABAJO_FINAL_ISAIAS_CALLEGARI_SALVADOR_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\trabajo_registro_alumno.vbproj": {}
+    "D:\\TRABAJO_FINAL_REGISTRO_ALUMNO_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\trabajo_registro_alumno.vbproj": {}
   },
   "projects": {
-    "D:\\TRABAJO_FINAL_ISAIAS_CALLEGARI_SALVADOR_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\trabajo_registro_alumno.vbproj": {
+    "D:\\TRABAJO_FINAL_REGISTRO_ALUMNO_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\trabajo_registro_alumno.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TRABAJO_FINAL_ISAIAS_CALLEGARI_SALVADOR_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\trabajo_registro_alumno.vbproj",
+        "projectUniqueName": "D:\\TRABAJO_FINAL_REGISTRO_ALUMNO_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\trabajo_registro_alumno.vbproj",
         "projectName": "trabajo_registro_alumno",
-        "projectPath": "D:\\TRABAJO_FINAL_ISAIAS_CALLEGARI_SALVADOR_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\trabajo_registro_alumno.vbproj",
+        "projectPath": "D:\\TRABAJO_FINAL_REGISTRO_ALUMNO_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\trabajo_registro_alumno.vbproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\TRABAJO_FINAL_ISAIAS_CALLEGARI_SALVADOR_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\obj\\",
+        "outputPath": "D:\\TRABAJO_FINAL_REGISTRO_ALUMNO_LENGUAJE_PROGRAMACION_III\\trabajo_registro_alumno\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
